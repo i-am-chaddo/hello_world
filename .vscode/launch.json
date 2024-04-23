@@ -1,19 +1,19 @@
 {
     "configurations": [
         {
-            "name": "Chrome - Debug",
+            "name": "Web - Debug",
             "request": "launch",
             "type": "dart",
             "flutterMode": "debug"
         },
         {
-            "name": "Chrome - Profile",
+            "name": "Web - Profile",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
         },
         {
-            "name": "Chrome - Release",
+            "name": "Web - Release",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"
@@ -38,13 +38,6 @@
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"
-        },
-        {
-            "name": "iOS ( 15 Pro ) - Debug",
-            "deviceId": "EF8E0D61-23B1-4261-B26D-9146A24D167E",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "debug"
         }
     ]
 }
