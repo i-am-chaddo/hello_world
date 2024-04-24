@@ -24,7 +24,7 @@ class _PostListState extends State<PostList> {
         var post = widget.listItems[index];
         return Card(
           shape: RoundedRectangleBorder(
-            side: const BorderSide(width: 2, color: Colors.greenAccent),
+            side: const BorderSide(width: 2, color: Colors.black),
             borderRadius: BorderRadius.circular(15.0),
           ),
           child: Row(
@@ -47,7 +47,7 @@ class _PostListState extends State<PostList> {
                   IconButton(
                     icon: const Icon(Icons.thumb_up_rounded),
                     onPressed: () => like(post.likePost),
-                    color: post.userLiked ? Colors.greenAccent : Colors.grey,
+                    color: post.userLiked ? Colors.green : Colors.grey,
                   )
                 ],
               )

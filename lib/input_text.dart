@@ -30,10 +30,15 @@ class _TextInputState extends State<TextInput> {
     return TextField(
         controller: controller,
         decoration: InputDecoration(
-            prefixIcon: const Icon(Icons.sms_rounded),
+            prefixIcon: const Icon(Icons.message_rounded),
             labelText: "Type Something Here...",
-            border: const OutlineInputBorder(
-                borderSide: BorderSide(width: 5, color: Colors.greenAccent)),
+            enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: const BorderSide(width: 2, color: Colors.black)),
+            focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: const BorderSide(width: 2, color: Colors.black)),
+            labelStyle: const TextStyle(color: Colors.black),
             suffixIcon: IconButton(
               icon: const Icon(Icons.send_rounded),
               tooltip: "Send",

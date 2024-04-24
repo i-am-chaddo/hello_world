@@ -7,13 +7,14 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: false,
-        title: const Text("Login !"),
-        backgroundColor: Colors.greenAccent,
-      ),
-      body: const Body(),
-    );
+        appBar: AppBar(
+          centerTitle: false,
+          title: const Text("Login !"),
+          backgroundColor: Colors.greenAccent,
+        ),
+        body: const SafeArea(
+          child: Body(),
+        ));
   }
 }
 
@@ -31,14 +32,23 @@ class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
     return Align(
-        alignment: Alignment.center,
+        alignment: Alignment.bottomCenter,
         child: Padding(
           padding: const EdgeInsets.all(10),
           child: TextField(
             controller: controller,
             decoration: InputDecoration(
+                enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    borderSide:
+                        const BorderSide(width: 2, color: Colors.black)),
+                focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    borderSide:
+                        const BorderSide(width: 2, color: Colors.black)),
                 prefixIcon: const Icon(Icons.person),
                 labelText: "Type Your Name Here...",
+                labelStyle: const TextStyle(color: Colors.black),
                 border: const OutlineInputBorder(
                     borderSide:
                         BorderSide(width: 5, color: Colors.greenAccent)),

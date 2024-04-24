@@ -29,7 +29,8 @@ class _HomePageState extends State<HomePage> {
           title: const Text("Hello World !"),
           backgroundColor: Colors.greenAccent,
         ),
-        body: Padding(
+        body: SafeArea(
+            child: Padding(
           padding: const EdgeInsets.all(10),
           child: Column(
             children: <Widget>[
@@ -37,6 +38,6 @@ class _HomePageState extends State<HomePage> {
               TextInput(newPost)
             ],
           ),
-        ));
+        )));
   }
 }
